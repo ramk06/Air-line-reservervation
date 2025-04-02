@@ -1,0 +1,141 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background for clean look */
+    margin: 0;
+    padding: 0;
+  }
+  h1{
+    color: #ddd;
+  }
+  
+.home-page-content {
+    text-align: center;
+    height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+    font-size: 24px;
+    color: #2C3E50; /* Dark blue text */
+    background-color: #ecf0f1; /* Light gray background */
+    margin-top: 60px; /* Adjust for navbar */
+}
+nav .header {
+    color: #ecf0f1; /* Light text for contrast */
+    font-size: 20px;
+    font-weight: bold;
+}
+nav {
+    background-color: #2C3E50; /* Dark blue background for navigation */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* Space between header and nav items */
+    align-items: center; /* Center items vertically */
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Align nav items to the right */
+    gap: 20px; /* Add spacing between nav items */
+}
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #ecf0f1; /* Light text for contrast */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: #3498db; /* Hover effect with light blue */
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #2980B9;
+  }
+  
+  /* Login & Auth Styles */
+  .auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  input {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  button.primary-btn {
+    background-color: #2980B9; /* Blue button */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button.primary-btn:hover {
+    background-color: #1A6FB5; /* Darker blue on hover */
+  }
+  
+  p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  p a {
+    color: #2980B9;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
