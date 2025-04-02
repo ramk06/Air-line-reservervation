@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link, Navigate } from "react-router-dom";
 import "./auth.css";
 
 class Register extends Component {
@@ -8,13 +9,14 @@ class Register extends Component {
       name: "",
       email: "",
       password: "",
+      navigateTo: null,
     };
   }
 
   handleRegister = (e) => {
     e.preventDefault();
     alert("Registration Successful! Please login.");
-    this.props.history.push("/login");
+    this.setState({ navigateTo: "/login" });
   };
 
   handleChange = (e) => {
@@ -22,7 +24,11 @@ class Register extends Component {
   };
 
   render() {
-    const { name, email, password } = this.state;
+    const { name, email, password, navigateTo } = this.state;
+
+    if (navigateTo) {
+      return <Navigate to={navigateTo} />;
+    }
 
     return (
       <div className="auth-container">
@@ -54,10 +60,12 @@ class Register extends Component {
           />
           <button type="submit" className="primary-btn">Register</button>
         </form>
-        <p>Already have an account? <a href="/login">Login</a></p>
+        <p>
+          Already have an account? <Link to="/login">Login</Link>
+        </p>
       </div>
     );
   }
 }
 
-export default Register
+export default Register;

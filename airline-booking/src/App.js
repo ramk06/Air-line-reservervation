@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Login from './component/login'; // Ensure the correct path
 import Footer from './component/Footer'; // Correct casing // Ensure the correct path
 import './component/register';
+import Register from './component/register'; // Ensure the correct path
 function App() {
   return (
     <Router>
@@ -27,6 +28,7 @@ function App() {
         <Route path="/flights" element={<div className="flights-page">Flights</div>} />
         <Route path="/my-booking" element={<div className="booking-page">My Booking</div>} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
 
       {/* Footer Component */}
