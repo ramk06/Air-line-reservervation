@@ -1,0 +1,68 @@
+/* Container */
+.search-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Form Layout */
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Input Box */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 160px;
+}
+
+/* Input Fields */
+.input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    flex: 1;
+    padding-left: 8px;
+}
+
+/* Icons */
+.icon {
+    color: #6c757d;
+    font-size: 18px;
+}
+
+/* Search Button */
+.search-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .search-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

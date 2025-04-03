@@ -1,54 +1,92 @@
+/* Auth Container */
 .auth-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.auth-container h2 {
+  color: #2C3E50; /* Dark blue color for the header */
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Login Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Fields */
+input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Input Fields on Focus */
+input:focus {
+  border-color: #2980B9; /* Blue border on focus */
+  outline: none;
+}
+
+/* Button */
+button.primary-btn {
+  background-color: #2980B9; /* Solid Blue Button */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover */
+button.primary-btn:hover {
+  background-color: #1A6FB5; /* Darker blue when hovered */
+}
+
+/* Links */
+p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+p a {
+  color: #2980B9; /* Blue links */
+  text-decoration: none;
+}
+
+/* Links Hover */
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for small devices */
+@media (max-width: 768px) {
+  .auth-container {
+      width: 90%; /* Make the container slightly larger on smaller screens */
+      margin-top: 40px;
   }
-  
-  h2 {
-    color: #004d99;
+
+  .auth-container h2 {
+      font-size: 24px; /* Adjust heading font size */
   }
-  
-  form {
-    display: flex;
-    flex-direction: column;
+
+  button.primary-btn {
+      font-size: 14px; /* Slightly smaller button text on small screens */
   }
-  
-  input {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .primary-btn {
-    padding: 10px;
-    background: #004d99;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .primary-btn:hover {
-    background: #002f66;
-  }
-  
-  p {
-    margin-top: 10px;
-  }
-  
-  a {
-    color: #004d99;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  input {
-    width: 90%;
-  }
+}

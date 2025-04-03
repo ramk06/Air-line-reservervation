@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link, Navigate } from "react-router-dom";
-import "./auth.css";
-
+import "./register.css"; // Ensure you have a CSS file for styling
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -9,12 +8,21 @@ class Register extends Component {
       name: "",
       email: "",
       password: "",
+      confirmPassword: "", // Added confirm password state
       navigateTo: null,
     };
   }
 
   handleRegister = (e) => {
     e.preventDefault();
+
+    // Check if passwords match
+    const { password, confirmPassword } = this.state;
+    if (password !== confirmPassword) {
+      alert("Passwords do not match. Please try again.");
+      return;
+    }
+
     alert("Registration Successful! Please login.");
     this.setState({ navigateTo: "/login" });
   };
@@ -24,7 +32,7 @@ class Register extends Component {
   };
 
   render() {
-    const { name, email, password, navigateTo } = this.state;
+    const { name, email, password, confirmPassword, navigateTo } = this.state;
 
     if (navigateTo) {
       return <Navigate to={navigateTo} />;
@@ -55,6 +63,14 @@ class Register extends Component {
             name="password"
             placeholder="Password"
             value={password}
+            onChange={this.handleChange}
+            required
+          />
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            value={confirmPassword}
             onChange={this.handleChange}
             required
           />
